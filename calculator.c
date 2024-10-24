@@ -20,6 +20,16 @@ float divide(int i, int j) {
     return ((float) i / j);  // Explicit type casting to float for decimal results.
 }
 
+double inverse(double x) {
+    if (x != 0) {
+        return 1 / x;
+    } else {
+        // Handle division by zero
+        return 0; // or some error handling
+    }
+}
+
+
 int main() {
     int a, b;
     char operation;
@@ -74,7 +84,7 @@ int main() {
             case 'i':
                 printf("Enter an integer: ");
                 scanf("%d", &a);
-                printf("Will be implemented soon...\n");
+                printf("The inverse of %d is %lf", a, inverse(a));
                 break;
             default:
                 printf("Invalid operation. Please try again.\n");
